@@ -1,5 +1,5 @@
 import React from "react";
-import {Title} from '../styles/pages/Home';
+import {Title} from '@/styles/pages/Home';
 import {GetServerSideProps} from "next";
 
 interface IProduct {
@@ -13,7 +13,7 @@ interface HomeProps {
 
 export default function Home({recommendedProducts}: HomeProps) {
     async function handleSum() {
-        const math = (await import("../lib/math")).default;
+        const math = (await import("@/lib/math")).default;
         alert(math.sum(3, 5));
     }
 
