@@ -34,12 +34,14 @@ export default function Home({recommendedProducts}: HomeProps) {
                     })}
                 </ul>
             </section>
+
+            <button onClick={handleSum}>Sum</button>
         </div>
     )
 }
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-    const response = await fetch('http://localhost:3333/recommended');
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/recommended`);
     const recommendedProducts = await response.json();
 
     return {
