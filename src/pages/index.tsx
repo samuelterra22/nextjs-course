@@ -12,6 +12,13 @@ interface HomeProps {
 }
 
 export default function Home({recommendedProducts}: HomeProps) {
+    async function handleSum() {
+        const math = (await import("../lib/math")).default;
+        alert(math.sum(3, 5));
+    }
+
+    // handleSum()
+
     return (
         <div>
             <section>
