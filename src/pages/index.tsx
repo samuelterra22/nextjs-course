@@ -1,6 +1,7 @@
 import React from "react";
 import {Title} from '@/styles/pages/Home';
 import {GetServerSideProps} from "next";
+import SEO from "@/components/SEO";
 
 interface IProduct {
     id: string;
@@ -17,11 +18,11 @@ export default function Home({recommendedProducts}: HomeProps) {
         alert(math.sum(3, 5));
     }
 
-    // handleSum()
-
     return (
         <div>
             <section>
+                <SEO title="DevCommerce, your best e-commerce!" shouldExcludeTitleSuffix/>
+
                 <Title>Products</Title>
 
                 <ul>
